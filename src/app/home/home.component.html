@@ -1,0 +1,10 @@
+﻿<div class="card mt-4">
+    <h4 class="card-header">You're logged</h4>
+    <div class="card-body">
+        <button (click)="TokenCheck()">Check token</button>
+        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+        <ul *ngIf="users">
+            <li *ngFor="let user of users">{{user.username}}</li>
+        </ul>
+    </div>
+</div>
